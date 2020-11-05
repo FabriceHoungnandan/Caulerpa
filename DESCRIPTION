@@ -1,0 +1,26 @@
+Package: Caulerpa
+Title: Data and Code for the CESAB Datatoolbox Exercices
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Fabrice",
+           family = "Houngnandan",
+           role = c("aut", "cre"),
+           email = "houngnandan@gmail.com")
+Description: Provides Data and Code for the CESAB Datatoolbox Exercices
+License: MIT + file LICENSE
+ByteCompile: true
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    here,
+    readr,
+    dplyr,
+    ggplot2,
+    magrittr,
+    forcats,
+    fishualize,
+    sf,
+    drake,
+    visNetwork
