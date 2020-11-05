@@ -3,3 +3,5 @@
 ^make\.R$
 ^output$
 ^text$
+^.*\.Rproj$
+^\.Rproj\.user$

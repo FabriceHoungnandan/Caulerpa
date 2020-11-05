@@ -1,30 +1,96 @@
 ---
-title: "report"
+title: "ping"
 author: "fabricehoungnandan"
 date: "05/11/2020"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(
+	echo = TRUE,
+	fig.align = "center",
+	fig.retina = 2,
+	fig.width = 10,
+	warning = FALSE,
+	cache = TRUE,
+	cache.lazy = FALSE
+)
 ```
 
-## R Markdown
+## Abstract  
+## Introduction 
+## Methodolologie 
+* Study area ()
+```{bash}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
 ```
 
-## Including Plots
+* Formule declin 
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+## Results 
+* Study area ()
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+* Declin influence ()
+
+
+## Discussion 
+
+## Conclusion
+## Bibliography 
+
+
+
+Question 3
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+library(ggplot2)
+````
+
+Question 4
+```{r, echo=FALSE, message=FALSE}
+penguins %>% 
+  head(10) %>% 
+  knitr::kable(format = "html", caption = "10 premières lignes table penguins")
+````
+
+## R Markdown / section 2
+Question 5 
+```{r, echo=FALSE, message=FALSE}
+summary(penguins$species)
+summary(penguins$island)
+
+#Moyenne par espèces des traits sur les manchots
+aggregate(penguins[, 3:5], list(penguins$species), mean)
+````
+
+## R Markdown / section 3 : Exploration graphique 
+Question 6:  histogramme superposé repésentant les masses @ plot density
+```{r, echo=FALSE, message=FALSE}
+ggplot(penguins, aes(penguins$body_mass_g, fill = penguins$species)) + geom_density(alpha = 0.2)
+````
+
+plot histograme 
+```{r, echo=FALSE, message=FALSE}
+ggplot(penguins, aes(penguins$body_mass_g, fill = penguins$species)) + 
+   geom_histogram(alpha = 0.5, aes(y = ..density..), position = 'identity')
+````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
